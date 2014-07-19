@@ -9,7 +9,6 @@ int main(void)
         printf("Height: ");
         height = GetInt();
     }
-    int blocks = 2;
     // below is leftovers from trying to use masks instead of loops to print the pyramid
     //
     //while (height > 0)
@@ -20,8 +19,21 @@ int main(void)
 
             //printf("%*s\n", blocks, "#");
     //}
-    while (height > 0)
-    {
-        
+    
+    for(int i = 0; i < height; i++) 
+	{
+		// print the spaces
+        for(int j = 0; j < height-i-1; j++)
+        {
+            printf(" ");
+        }
+        // print the hashes
+		for(int k = 0; k < i+2; k++)
+		{
+			printf("#");
+		}
+		printf("\n");
+	}
+	return 0;    
 }
 
