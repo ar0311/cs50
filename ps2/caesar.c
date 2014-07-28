@@ -2,6 +2,7 @@
 #include <cs50.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(int argc, string argv[])
 {
@@ -36,8 +37,16 @@ int main(int argc, string argv[])
     string ciphertext = plaintext;
     for (int i = 0; i < len; i++ )
     {
-        int asc = ciphertext[i] + key;
-        ciphertext[i] = asc;        
+        if (isupper(ciphertext[i]))
+        {
+            int asc = ((ciphertext[i] + key) % 26)+65;
+            ciphertext[i] = asc;
+        }
+        else
+        {
+            int asc = ((ciphertext[i] + key) % 26)+97;
+            ciphertext[i] = asc;
+        }       
     }
     
     printf("%s\n", ciphertext);
