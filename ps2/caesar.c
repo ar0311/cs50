@@ -37,20 +37,21 @@ int main(int argc, string argv[])
     string ciphertext = plaintext;
     for (int i = 0; i < len; i++ )
     {
-        if (isupper(ciphertext[i]))
+        if (isalpha(ciphertext[i]))
         {
-            int asc = ((ciphertext[i] + key) % 26)+65;
-            ciphertext[i] = asc;
-        }
-        else
-        {
-            int asc = ((ciphertext[i] + key) % 26)+97;
-            ciphertext[i] = asc;
+            if (isupper(ciphertext[i]))
+            {
+                int asc = ((ciphertext[i] + key) % 26)+65;
+                ciphertext[i] = asc;
+            }
+            else
+            {
+                int asc = ((ciphertext[i] + key) % 26)+97;
+                ciphertext[i] = asc;
+            }
         }       
     }
     
     printf("%s\n", ciphertext);
-    
-    
-    
+    return 0; 
 }
