@@ -33,6 +33,15 @@ int main(int argc, string argv[])
         return 1;
     }
     
+    string ciphertext = plaintext;
+    for (int i = 0; i < len; i++ )
+    {
+        int asc = ciphertext[i] + key;
+        ciphertext[i] = asc;        
+    }
+    
+    printf("%s\n", ciphertext);
+    
     
     
 }
