@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     string plaintext = GetString();
     int len = strlen(plaintext);
     
-    if (len = 0)
+    if (len == 0)
     {
         printf("\nNo input given. Exiting.\n");
         return 1;
