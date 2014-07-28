@@ -23,8 +23,7 @@ int main(int argc, string argv[])
         printf("where <key> is a positive numeric value.\n\n");
         return 1;
     }
-    
-    printf("\nPlease enter your plaintext: ");   
+       
     string plaintext = GetString();
     int len = strlen(plaintext);
     
@@ -41,12 +40,12 @@ int main(int argc, string argv[])
         {
             if (isupper(ciphertext[i]))
             {
-                int asc = ((ciphertext[i] + key) % 26)+65;
+                int asc = 'A' + ((ciphertext[i] - 'A' + key) % 26);
                 ciphertext[i] = asc;
             }
             else
             {
-                int asc = ((ciphertext[i] + key) % 26)+97;
+                int asc = 'a' + ((ciphertext[i] - 'a' + key) % 26);
                 ciphertext[i] = asc;
             }
         }       
