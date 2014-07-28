@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -22,5 +23,16 @@ int main(int argc, string argv[])
         return 1;
     }
     
-    printf("%d\n",key);
+    printf("\nPlease enter your plaintext: ");   
+    string plaintext = GetString();
+    int len = strlen(plaintext);
+    
+    if (len = 0)
+    {
+        printf("\nNo input given. Exiting.\n");
+        return 1;
+    }
+    
+    
+    
 }
