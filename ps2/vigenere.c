@@ -14,9 +14,9 @@ int main(int argc, string argv[])
         return 1; 
     }
     
-    int key = atoi(argv[1]);
+    string key = argv[1];
     
-    if (key <= 0)
+    if (!isalpha(key))
     {
         printf("\nInvalid key entered.\n\n");
         printf("Usage: ./vigenere <key>\n");
@@ -24,7 +24,7 @@ int main(int argc, string argv[])
         return 1;
     }
        
-    string plaintext = GetString();
+    string text = GetString();
     int len = strlen(plaintext);
     
     if (len == 0)
@@ -33,24 +33,24 @@ int main(int argc, string argv[])
         return 1;
     }
     
-    string ciphertext = plaintext;
+    //string ciphertext = plaintext;
     for (int i = 0; i < len; i++ )
     {
-        if (isalpha(ciphertext[i]))
+        if (isalpha(text[i]))
         {
-            if (isupper(ciphertext[i]))
+            if (isupper(text[i]))
             {
-                int asc = 'A' + ((ciphertext[i] - 'A' + key) % 26);
-                ciphertext[i] = asc;
+                int asc = 'A' + ((text[i] - 'A' + key) % 26);
+                text[i] = asc;
             }
             else
             {
-                int asc = 'a' + ((ciphertext[i] - 'a' + key) % 26);
-                ciphertext[i] = asc;
+                int asc = 'a' + ((text[i] - 'a' + key) % 26);
+                text[i] = asc;
             }
         }       
     }
     
-    printf("%s\n", ciphertext);
+    printf("%s\n", text);
     return 0; 
 }
