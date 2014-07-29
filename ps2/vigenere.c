@@ -33,6 +33,7 @@ int main(int argc, string argv[])
         return 1;
     }
     
+    int keylen = strlen(key) - 1;
     //string ciphertext = plaintext;
     for (int i = 0; i < len; i++ )
     {
