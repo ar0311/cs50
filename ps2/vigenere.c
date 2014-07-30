@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     }
        
     string text = GetString();
-    int len = strlen(plaintext);
+    int len = strlen(text);
     
     if (len == 0)
     {
@@ -33,22 +33,25 @@ int main(int argc, string argv[])
         return 1;
     }
     
-    int keylen = strlen(key) - 1;
+    //int keylen = strlen(key) - 1;
     //string ciphertext = plaintext;
+    int track = 0;
     for (int i = 0; i < len; i++ )
     {
         if (isalpha(text[i]))
         {
             if (isupper(text[i]))
             {
-                int asc = 'A' + ((text[i] - 'A' + key) % 26);
+                int asc = 'A' + ((text[i] - 'A' + key[track % 3]) % 26);
                 text[i] = asc;
             }
             else
             {
-                int asc = 'a' + ((text[i] - 'a' + key) % 26);
+                int asc = 'a' + ((text[i] - 'a' + key[track % 3]) % 26);
                 text[i] = asc;
             }
+            
+            track ++;
         }       
     }
     
