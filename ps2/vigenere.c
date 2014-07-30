@@ -27,28 +27,22 @@ int main(int argc, string argv[])
         }
     }
     
-    // need to process key to upper or lower
-    // TODO
-    
     for (int i = 0; i < strlen(key); i++)
     {
         key[i] = toupper(key[i]);
     }
        
     string text = GetString();
-    int len = strlen(text);
     
-    if (len == 0)
+    if (strlen(text) == 0)
     {
         printf("\nNo input given. Exiting.\n");
         return 1;
     }
     
-    //int keylen = strlen(key) - 1;
-    //string ciphertext = plaintext;
     int track = 0;
     
-    for (int i = 0; i < len; i++ )
+    for (int i = 0; i < strlen(text); i++ )
     {
         if (isalpha(text[i]))
         {
