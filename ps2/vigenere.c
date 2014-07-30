@@ -29,6 +29,11 @@ int main(int argc, string argv[])
     
     // need to process key to upper or lower
     // TODO
+    
+    for (int i = 0; i < strlen(key); i++)
+    {
+        key[i] = toupper(key[i]);
+    }
        
     string text = GetString();
     int len = strlen(text);
@@ -49,12 +54,12 @@ int main(int argc, string argv[])
         {
             if (isupper(text[i]))
             {
-                int asc = 'A' + ((text[i] - 'A' + key[track % strlen(key)]) % 26);
+                int asc = 'A' + ((text[i] - 'A' + (key[track % strlen(key)] - 'A')) % 26);
                 text[i] = asc;
             }
             else
             {
-                int asc = 'a' + ((text[i] - 'a' + key[track % strlen(key)]) % 26);
+                int asc = 'a' + ((text[i] - 'a' + (key[track % strlen(key)] - 'A')) % 26);
                 text[i] = asc;
             }
             
