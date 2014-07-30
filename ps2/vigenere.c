@@ -25,7 +25,10 @@ int main(int argc, string argv[])
             printf("where <key> is a single word.\n\n");
             return 1;
         }
-     }
+    }
+    
+    // need to process key to upper or lower
+    // TODO
        
     string text = GetString();
     int len = strlen(text);
@@ -39,18 +42,19 @@ int main(int argc, string argv[])
     //int keylen = strlen(key) - 1;
     //string ciphertext = plaintext;
     int track = 0;
+    
     for (int i = 0; i < len; i++ )
     {
         if (isalpha(text[i]))
         {
             if (isupper(text[i]))
             {
-                int asc = 'A' + ((text[i] - 'A' + key[track % 3]) % 26);
+                int asc = 'A' + ((text[i] - 'A' + key[track % strlen(key)]) % 26);
                 text[i] = asc;
             }
             else
             {
-                int asc = 'a' + ((text[i] - 'a' + key[track % 3]) % 26);
+                int asc = 'a' + ((text[i] - 'a' + key[track % strlen(key)]) % 26);
                 text[i] = asc;
             }
             
