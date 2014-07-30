@@ -16,13 +16,16 @@ int main(int argc, string argv[])
     
     string key = argv[1];
     
-    if (!isalpha(key))
+    for (int i = 0; i < strlen(key); i++)
     {
-        printf("\nInvalid key entered.\n\n");
-        printf("Usage: ./vigenere <key>\n");
-        printf("where <key> is a single word.\n\n");
-        return 1;
-    }
+        if (!isalpha(key[i]))
+        {
+            printf("\nInvalid key entered.\n\n");
+            printf("Usage: ./vigenere <key>\n");
+            printf("where <key> is a single word.\n\n");
+            return 1;
+        }
+     }
        
     string text = GetString();
     int len = strlen(text);
