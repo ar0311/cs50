@@ -11,8 +11,6 @@
 
 #include "helpers.h"
 
-void swap();
-
 /**
  * Returns true if value is in array of n values, else false.
  */

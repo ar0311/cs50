@@ -18,3 +18,8 @@ bool search(int value, int values[], int n);
  * Sorts array of n values.
  */
 void sort(int values[], int n);
+
+/**
+ * Swaps two adjacent elements in a array of integers, starting with first
+ */
+void swap(int first, int values[]);
