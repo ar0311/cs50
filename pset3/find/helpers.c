@@ -54,5 +54,8 @@ void sort(int values[], int n)
 
 void swap(int first, int values[])
 {
-
+    int temp;
+    temp = values[first];
+    values[first] = values[first + 1];
+    values[first + 1] = temp;
 }
