@@ -16,17 +16,29 @@
  */
 bool search(int value, int values[], int n)
 {
-    if (n <= 0)
+    while (n > 0)
     {
-        return false;
-    }
-    for (int i = 0; i < n; i++)
-    {
-        if (values[i] == value)
+        int mid = n / 2;
+        if (values[mid] == value)
         {
             return true;
         }
+        else if (values[mid] > value) // search left
+        {
+            return true;
+        }
+        else if (values[mid] < value) // search right
+        {
+            return true;
+        }
+        return false;
     }
+    //for (int i = 0; i < n; i++)
+    //{
+    //    if (values[i] == value)
+    //    {
+    //        return true;
+    //    }
     return false;
 }
 
