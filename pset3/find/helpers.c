@@ -11,6 +11,8 @@
 
 #include "helpers.h"
 
+void swap();
+
 /**
  * Returns true if value is in array of n values, else false.
  */
@@ -39,10 +41,18 @@ void sort(int values[], int n)
     {
         for (int i = 0; i < n; i++)
         {
-            
+            if (values[i] > values[i + 1])
+            {
+                swap(i, values);
+            }
         }
         n--;
     } while (n > 0);
     
     return;
+}
+
+void swap(int first, int values[])
+{
+
 }
