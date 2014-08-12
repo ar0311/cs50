@@ -50,6 +50,9 @@ void sort(int values[], int n)
     return;
 }
 
+/**
+ * Swaps two adjacent elements in a array of integers, starting with first
+ */
 void swap(int first, int values[])
 {
     int temp;
