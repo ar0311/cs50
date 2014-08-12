@@ -21,17 +21,18 @@
 
 int main(int argc, string argv[])
 {
-    // TODO: comment me
+    // check if user didn't enter 1 or 2 parameters, and if so print usage info
     if (argc != 2 && argc != 3)
     {
         printf("Usage: ./generate n [s]\n");
         return 1;
     }
 
-    // TODO: comment me
+    // convert first command argument to integer, store in variable "n"
     int n = atoi(argv[1]);
 
-    // TODO: comment me
+    // if user gave optional seed value, set it - otherwise use time(NULL)
+    // make sure we make srand a positive (unsigned) int
     if (argc == 3)
     {
         srand((unsigned int) atoi(argv[2]));
@@ -41,7 +42,8 @@ int main(int argc, string argv[])
         srand((unsigned int) time(NULL));
     }
 
-    // TODO: comment me
+    // iterate random number generator n times
+    // use modulo to limit size of resulting values
     for (int i = 0; i < n; i++)
     {
         printf("%i\n", rand() % LIMIT);
