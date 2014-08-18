@@ -28,13 +28,12 @@ bool search(int value, int values[], int n)
         }
         else if (values[mid] > value) // search left
         {
-            max = mid;
+            max = mid - 1;
         }
         else if (values[mid] < value) // search right
         {
-            min = mid;
+            min = mid + 1;
         }
-        return false;
     }
     return false;
 }
