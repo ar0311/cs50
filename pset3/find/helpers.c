@@ -16,20 +16,23 @@
  */
 bool search(int value, int values[], int n)
 {
-    while (n > 0)
+    int min = 0;
+    int mid;
+    int max = n - 1;
+    while (min <= max)
     {
-        int mid = n / 2;
-        if (values[mid] == value)
+        mid = (min + max) / 2;
+        if (values[mid] == value || values[min] == value || values[max] == value)
         {
             return true;
         }
         else if (values[mid] > value) // search left
         {
-            return true;
+            max = mid;
         }
         else if (values[mid] < value) // search right
         {
-            return true;
+            min = mid;
         }
         return false;
     }
