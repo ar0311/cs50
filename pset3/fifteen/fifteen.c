@@ -131,8 +131,8 @@ void greet(void)
  */
 void init(void)
 {
-    bool even;
-    if ((d * d) % 2 == 0)
+    bool even = false;
+    if (((d * d) % 2) == 0)
         even = true;
         
     int tile_val_max = (d * d) - 1;
