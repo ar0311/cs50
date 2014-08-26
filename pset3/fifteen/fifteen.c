@@ -166,11 +166,21 @@ bool move(int tile)
     {
         for (int j = 0; j < d; j++)   
         {
-            if (board[i][j]== tile)
+            if (board[i][j] == tile)
             {    
-                int location_a = i;
-                int location_b = j;
+                int x = i;
+                int y = j;
                 // TODO check empty space next to found tile, if true then swap
+                if (
+                    ((x < (d - 1)) && (board[x+1][y] == 0)) ||
+                    ((x > 0) && (board[x-1][y] == 0)) ||
+                    ((y < (d - 1)) && (board[x][y+1] == 0)) ||
+                    ((y > 0) && (board[x][y-1] == 0))
+                    )
+                    {
+                        printf("yep");
+                        GetInt();
+                    }
             }
         }
     }
