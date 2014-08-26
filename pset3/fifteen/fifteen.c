@@ -172,28 +172,28 @@ bool move(int tile)
             {    
                 int x = i;
                 int y = j;
-                // TODO check empty space next to found tile, if true then swap
-                if ((x < (d - 1)) && (board[x+1][y] == 0))
+                
+                if ((x < (d - 1)) && (board[x + 1][y] == 0))
                 {
-                    board[x+1][y] = tile;
+                    board[x + 1][y] = tile;
                     board[x][y] = 0;
                     return true;
                 }
-                else if ((x > 0) && (board[x-1][y] == 0))
+                else if ((x > 0) && (board[x - 1][y] == 0))
                 {
-                    board[x-1][y] = tile;
+                    board[x - 1][y] = tile;
                     board[x][y] = 0;
                     return true;
                 }
-                else if ((y < (d - 1)) && (board[x][y+1] == 0))
+                else if ((y < (d - 1)) && (board[x][y + 1] == 0))
                 {
-                    board[x][y+1] = tile;
+                    board[x][y + 1] = tile;
                     board[x][y] = 0;
                     return true;
                 }
-                else if ((y > 0) && (board[x][y-1] == 0))
+                else if ((y > 0) && (board[x][y - 1] == 0))
                 {
-                    board[x][y-1] = tile;
+                    board[x][y - 1] = tile;
                     board[x][y] = 0;
                     return true;
                 }
