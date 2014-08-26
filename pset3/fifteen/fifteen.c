@@ -131,7 +131,11 @@ void greet(void)
  */
 void init(void)
 {
-    // TODO
+    int tile_val_max = (d * d) - 1;
+    
+    for (int i = 0; i < d; i++)
+        for (int j = 0; j < d; j++)
+            board[i][j] = tile_val_max--;
 }
 
 /**
