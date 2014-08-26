@@ -162,7 +162,18 @@ void draw(void)
  */
 bool move(int tile)
 {
-    // TODO
+    for (int i = 0; i < d; i++)
+    {
+        for (int j = 0; j < d; j++)   
+        {
+            if (board[i][j]== tile)
+            {    
+                int location_a = i;
+                int location_b = j;
+                // TODO check empty space next to found tile, if true then swap
+            }
+        }
+    }
     return false;
 }
 
