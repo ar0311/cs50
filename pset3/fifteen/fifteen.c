@@ -131,11 +131,21 @@ void greet(void)
  */
 void init(void)
 {
+    bool even;
+    if ((d * d) % 2 == 0)
+        even = true;
+        
     int tile_val_max = (d * d) - 1;
     
     for (int i = 0; i < d; i++)
         for (int j = 0; j < d; j++)
             board[i][j] = tile_val_max--;
+
+    if (even)
+    {    
+        board[d-1][d-2] = 2;
+        board[d-1][d-3] = 1;
+    }
 }
 
 /**
