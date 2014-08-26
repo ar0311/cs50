@@ -148,7 +148,9 @@ void draw(void)
         for (int j = 0; j < d; j++)
         {
             if (board[i][j] == 0)
-                printf("|_|");
+                printf("|__|");
+            else if (board[i][j] < 10)
+                printf("| %d|",board[i][j]);
             else
                 printf("|%d|",board[i][j]);
         }
@@ -175,23 +177,26 @@ bool move(int tile)
                 {
                     board[x+1][y] = tile;
                     board[x][y] = 0;
+                    return true;
                 }
                 else if ((x > 0) && (board[x-1][y] == 0))
                 {
                     board[x-1][y] = tile;
                     board[x][y] = 0;
+                    return true;
                 }
                 else if ((y < (d - 1)) && (board[x][y+1] == 0))
                 {
                     board[x][y+1] = tile;
                     board[x][y] = 0;
+                    return true;
                 }
                 else if ((y > 0) && (board[x][y-1] == 0))
                 {
                     board[x][y-1] = tile;
                     board[x][y] = 0;
+                    return true;
                 }
-                return true;
             }
         }
     }
