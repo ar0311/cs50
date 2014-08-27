@@ -18,7 +18,7 @@ bool search(int value, int values[], int n)
 {
     int min = 0;
     int mid;
-    int max = n - 1;
+    int max = n;
     while (min <= max)
     {
         mid = (min + max) / 2;
