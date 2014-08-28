@@ -109,11 +109,17 @@ void initBricks(GWindow window)
     colours[3] = "YELLOW";
     colours[4] = "PURPLE";
     
+    int x = 0;
+    int y = 0;
+    
     for (int i = 0; i < ROWS; i++)
     {
         for (int j = 0; j < COLS; j++)
         {
-            // draw bricks
+            GRect brick = newGRect(x, y, WIDTH, 10);
+            setFilled(brick, true);
+            setColor(brick, colours[i]);
+            add(window, brick);
         }
     }
 }
