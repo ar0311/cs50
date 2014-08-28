@@ -78,7 +78,7 @@ int main(void)
     while (lives > 0 && bricks > 0)
     {
         GEvent event = getNextEvent(MOUSE_EVENT);
-        if (event != null)
+        if (event != NULL)
         {
             // mouse event happened, check for movement
             if (getEventType(event) == MOUSE_MOVED)
