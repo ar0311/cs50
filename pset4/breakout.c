@@ -80,7 +80,11 @@ int main(void)
         GEvent event = getNextEvent(MOUSE_EVENT);
         if (event != null)
         {
-            // mouse event happened, move paddle
+            // mouse event happened, check for movement
+            if (getEventType(event) == MOUSE_MOVED)
+            {
+                
+            }
         }
     }
 
