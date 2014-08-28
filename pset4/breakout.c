@@ -102,7 +102,12 @@ int main(void)
  */
 void initBricks(GWindow window)
 {
-    // TODO
+    string colours[5]; // ROWS is const, will need to recycle if necessary
+    colours[0] = "RED";
+    colours[1] = "BLUE";
+    colours[2] = "GREEN";
+    colours[3] = "YELLOW";
+    colours[4] = "PURPLE";
 }
 
 /**
