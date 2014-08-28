@@ -107,7 +107,7 @@ void initBricks(GWindow window)
     colours[1] = "BLUE";
     colours[2] = "GREEN";
     colours[3] = "YELLOW";
-    colours[4] = "PURPLE";
+    colours[4] = "ORANGE";
     
     int x = 0;
     int y = 0;
