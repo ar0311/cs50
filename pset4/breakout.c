@@ -108,6 +108,14 @@ void initBricks(GWindow window)
     colours[2] = "GREEN";
     colours[3] = "YELLOW";
     colours[4] = "PURPLE";
+    
+    for (int i = 0; i < ROWS; i++)
+    {
+        for (int j = 0; j < COLS; j++)
+        {
+            // draw bricks
+        }
+    }
 }
 
 /**
