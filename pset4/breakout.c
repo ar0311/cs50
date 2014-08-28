@@ -109,18 +109,23 @@ void initBricks(GWindow window)
     colours[3] = "YELLOW";
     colours[4] = "ORANGE";
     
-    int x = 0;
-    int y = 0;
+    int x = 10;
+    int y = 5;
+    
+    int brick_width = (WIDTH - (COLS * 5)) / COLS;
     
     for (int i = 0; i < ROWS; i++)
     {
         for (int j = 0; j < COLS; j++)
         {
-            GRect brick = newGRect(x, y, WIDTH, 10);
+            GRect brick = newGRect(x, y, brick_width, 10);
             setFilled(brick, true);
             setColor(brick, colours[i]);
             add(window, brick);
+            
+            x += brick_width + 5;
         }
+        y += 20;
     }
 }
 
