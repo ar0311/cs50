@@ -83,7 +83,7 @@ int main(void)
             // mouse event happened, check for movement
             if (getEventType(event) == MOUSE_MOVED)
             {
-                int x = getX(event);
+                int x = getX(event) - (PADDLE_WIDTH / 2);
                 setLocation(paddle, x, HEIGHT - 20);                
             }
         }
