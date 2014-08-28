@@ -125,6 +125,7 @@ void initBricks(GWindow window)
             
             x += brick_width + 5;
         }
+        x = 10;
         y += 20;
     }
 }
