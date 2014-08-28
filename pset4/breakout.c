@@ -109,10 +109,10 @@ void initBricks(GWindow window)
     colours[3] = "YELLOW";
     colours[4] = "ORANGE";
     
-    int x = 10;
+    int x = 5;
     int y = 5;
     
-    int brick_width = (WIDTH - (COLS * 5)) / COLS;
+    int brick_width = ((WIDTH - (COLS * 5)) / COLS) - 1;
     
     for (int i = 0; i < ROWS; i++)
     {
@@ -125,7 +125,7 @@ void initBricks(GWindow window)
             
             x += brick_width + 5;
         }
-        x = 10;
+        x = 5;
         y += 20;
     }
 }
