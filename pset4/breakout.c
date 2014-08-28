@@ -77,7 +77,11 @@ int main(void)
     // keep playing until game over
     while (lives > 0 && bricks > 0)
     {
-        // TODO
+        GEvent event = getNextEvent(MOUSE_EVENT);
+        if (event != null)
+        {
+            // mouse event happened, move paddle
+        }
     }
 
     // wait for click before exiting
