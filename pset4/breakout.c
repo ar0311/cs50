@@ -110,11 +110,13 @@ GOval initBall(GWindow window)
  */
 GRect initPaddle(GWindow window)
 {
-    GRect paddle = newGRect((WIDTH / 2) + (PADDLE_WIDTH / 2),
+    GRect paddle = newGRect((WIDTH / 2) - (PADDLE_WIDTH / 2),
                             (HEIGHT - 20), PADDLE_WIDTH, PADDLE_HEIGHT);
 
     setFilled(paddle, true);
     setColor(paddle, "BLACK");
+    
+    add(window, paddle);
     
     return paddle;
 }
