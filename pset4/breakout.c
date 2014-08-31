@@ -127,6 +127,7 @@ int main(void)
                 move_y = -move_y;
                 removeGWindow(window, object);
                 points++;
+                bricks--;
                 
                 updateScoreboard(window, label, points);
             }
