@@ -219,11 +219,11 @@ GRect initPaddle(GWindow window)
  */
 GLabel initScoreboard(GWindow window)
 {
-    GLabel label = newGLabel("Score: 0");
+    GLabel label = newGLabel("0");
     
     setColor(label, "BLUE");
     add(window, label);
-    setLocation(label, WIDTH / 4 - getWidth(label) / 2, 200);
+    setLocation(label, ((getWidth(window) - getWidth(label)) / 2), ((getHeight(window) - getHeight(label)) / 2));
     
     return label;
 }
