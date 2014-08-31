@@ -99,6 +99,11 @@ int main(void)
                 int x = getX(event) - (PADDLE_WIDTH / 2);
                 setLocation(paddle, x, HEIGHT - 20);                
             }
+            
+            if (getEventType(event) == MOUSE_CLICKED)
+            {
+                paused = !paused;
+            }
         }
     }
 
