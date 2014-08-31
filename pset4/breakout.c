@@ -132,7 +132,7 @@ int main(void)
             // bounce off left
             move_x = -move_x;
         }
-        else if (getX(ball) > WIDTH)
+        else if (getX(ball) > (WIDTH - 20))
         {
             // bounce off right
             move_x = -move_x;
