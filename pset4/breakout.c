@@ -112,6 +112,13 @@ int main(void)
                 paused = !paused;
             }
         }
+        
+        GObject object = detectCollision(window, ball);
+        
+        if (object != NULL)
+        {
+            // collided with something
+        }
     }
 
     // wait for click before exiting
