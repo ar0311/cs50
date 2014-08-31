@@ -142,6 +142,20 @@ int main(void)
             // bounce off right
             move_x = -move_x;
         }
+        
+        if (getY(ball) > HEIGHT)
+        {
+            // ball missed paddle
+            removeGWindow(window, ball);
+            lives--;
+            ball = initBall(window);
+            move_x = drand48();
+            if (drand48() < 0.5)
+            {
+                move_x = -move_x;
+            }
+            paused = true;
+        }
     }
 
     // wait for click before exiting
