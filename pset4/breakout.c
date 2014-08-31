@@ -76,10 +76,17 @@ int main(void)
     
     double move_x = 0;
     double move_y = 0.05;
+    
+    bool paused = true;
 
     // keep playing until game over
     while (lives > 0 && bricks > 0)
     {
+        if (paused)
+        {
+            waitForClick();
+            paused = false;
+        }
         // move ball
         move(ball, move_x, move_y);
         
