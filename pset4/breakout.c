@@ -117,7 +117,10 @@ int main(void)
         
         if (object != NULL)
         {
-            // collided with something
+            if (object == paddle)
+            {
+                move_y = -move_y;
+            }
         }
     }
 
