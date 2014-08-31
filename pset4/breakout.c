@@ -161,10 +161,14 @@ int main(void)
     if (lives > 0)
     {
         // win game
+        setLabel(label, "WINNER");
+        setColor(label, "GREEN");
     }
     else
     {
         // lose game
+        setLabel(label, "LOSER");
+        setColor(label, "RED");
     }
 
     // wait for click before exiting
