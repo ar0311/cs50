@@ -121,6 +121,10 @@ int main(void)
             {
                 move_y = -move_y;
             }
+            else if (strcmp(getType(object), "GRect") == 0)
+            {
+                move_y = -move_y;
+            }
         }
     }
 
