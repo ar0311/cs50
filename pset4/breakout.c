@@ -77,6 +77,11 @@ int main(void)
     double move_x = drand48();
     double move_y = 2;
     
+    if (drand48() < 0.5)
+    {
+        move_x = -move_x;
+    }
+    
     bool paused = true;
 
     // keep playing until game over
