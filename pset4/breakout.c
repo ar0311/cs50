@@ -74,8 +74,8 @@ int main(void)
     // number of points initially
     int points = 0;
     
-    int move_x = 0;
-    int move_y = 0;
+    double move_x = 0;
+    double move_y = drand48();
 
     // keep playing until game over
     while (lives > 0 && bricks > 0)
