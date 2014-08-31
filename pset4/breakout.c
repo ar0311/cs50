@@ -126,6 +126,17 @@ int main(void)
                 move_y = -move_y;
             }
         }
+        
+        if (getX(ball) <= 0)
+        {
+            // bounce off left
+            move_x = -move_x;
+        }
+        else if (getX(ball) > WIDTH)
+        {
+            // bounce off right
+            move_x = -move_x;
+        }
     }
 
     // wait for click before exiting
