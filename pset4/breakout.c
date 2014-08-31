@@ -74,8 +74,8 @@ int main(void)
     // number of points initially
     int points = 0;
     
-    double move_x = 0;
-    double move_y = 0.05;
+    double move_x = drand48();
+    double move_y = 2;
     
     bool paused = true;
 
@@ -89,6 +89,8 @@ int main(void)
         }
         // move ball
         move(ball, move_x, move_y);
+        
+        pause(10);
         
         GEvent event = getNextEvent(MOUSE_EVENT);
         if (event != NULL)
