@@ -95,7 +95,7 @@ int main(void)
         // move ball
         move(ball, move_x, move_y);
         
-        pause(10);
+        pause(5);
         
         GEvent event = getNextEvent(MOUSE_EVENT);
         if (event != NULL)
