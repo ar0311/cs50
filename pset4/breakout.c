@@ -123,7 +123,12 @@ int main(void)
             }
             else if (strcmp(getType(object), "GRect") == 0)
             {
+                // hit brick
                 move_y = -move_y;
+                removeGWindow(window, object);
+                points++;
+                
+                updateScoreboard(window, label, points);
             }
         }
         
