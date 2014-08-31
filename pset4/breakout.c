@@ -157,6 +157,15 @@ int main(void)
             paused = true;
         }
     }
+    
+    if (lives > 0)
+    {
+        // win game
+    }
+    else
+    {
+        // lose game
+    }
 
     // wait for click before exiting
     waitForClick();
