@@ -155,7 +155,13 @@ int main(void)
                 move_x = -move_x;
             }
             paused = true;
-        }
+         }
+         
+         if (getY(ball) < 0)
+         {
+            // bounce off top
+            move_y = -move_y;
+         }
     }
     
     if (lives > 0)
