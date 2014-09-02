@@ -9,6 +9,11 @@ int main(void)
     {
         printf("Height: ");
         height = GetInt();
+        
+        if (height == 0)
+        {
+            return 0;
+        }
     }
 
     for(int i = 0; i < height; i++) 
